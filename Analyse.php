@@ -1,6 +1,7 @@
 <?php
 class student{
 $subjects = array("Maths","TOC","COA","DBMS","OOPS","CS");
+$credits = array(4,4,4,4,3,4);
 $name;
 $gpa=array();
 $cgpa;
@@ -41,7 +42,14 @@ array_push($gpa,0);
 
 
 } 
+function calc_cgpa(){
+$res=0;$len=count($credits);
+for($i=0;$i<$len;$i++){
+$res+=$credits[$i]*$gpa[$i];
 
+}
+echo $res;
+}
 
 }
 
