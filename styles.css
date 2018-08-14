@@ -2,4 +2,5 @@ html,body{
 background-color:rgb(147, 188, 255);
 border-style: solid;
 border-width: 2px;
+padding: 20px;
 }
