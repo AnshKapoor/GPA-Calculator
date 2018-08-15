@@ -1,13 +1,13 @@
 <?php
 class student{
-$subjects = array("Maths","TOC","COA","DBMS","OOPS","CS");
-$credits = array(4,4,4,4,3,4);
-$name;
-$gpa=array();
-$cgpa;
-$marks=array();
-$length= count($marks);
-function calc_GPA(){
+public $subjects = array("Maths","TOC","COA","DBMS","OOPS","CS");
+public $credits = array(4,4,4,4,3,4);
+public $name;
+public $gpa=array();
+public $cgpa;
+public $marks=array();
+public $length= count($marks);
+public function calc_GPA(){
 for($i=0;$i<$length;$i++){
 if($marks[$i]>=90 && $marks[$i]<=100)
 array_push($gpa,10);
@@ -42,7 +42,7 @@ array_push($gpa,0);
 
 
 } 
-function calc_cgpa(){
+public function calc_cgpa(){
 $res=0;$len=count($credits);
 for($i=0;$i<$len;$i++){
 $res+=$credits[$i]*$gpa[$i];
@@ -53,12 +53,23 @@ echo $res;
 
 }
 
+$s = new student;
+
 $Maths = $_GET["sub1"];
 $TOC =$_GET["sub2"];
 $COA= $_GET["sub3"];
 $DBMS   =$_GET["sub4"];
 $OOP  =$_GET["sub5"];
 $CS   =$_GET["sub6"];
+
+$s->$marks[0]=$Maths;
+$s->$marks[1]=$Maths;
+$s->$marks[2]=$Maths;
+$s->$marks[3]=$Maths;
+$s->$marks[4]=$Maths;
+$s->$marks[5]=$Maths;
+$s->calc_GPA();
+$s->calc_cgpa();
 
 
 
