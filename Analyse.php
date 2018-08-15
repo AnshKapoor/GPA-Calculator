@@ -1,11 +1,8 @@
 <?php
 class student{
-public $subjects = array("Maths","TOC","COA","DBMS","OOPS","CS");
-public $credits = array(4,4,4,4,3,4);
+
 public $name;
-public $gpa=array();
-public $cgpa;
-public $marks=array();
+
 public $length= count($marks);
 public function calc_GPA(){
 for($i=0;$i<$length;$i++){
@@ -53,7 +50,7 @@ echo $res;
 
 }
 
-$s = new student;
+
 
 $Maths = $_GET["sub1"];
 $TOC =$_GET["sub2"];
@@ -61,27 +58,6 @@ $COA= $_GET["sub3"];
 $DBMS   =$_GET["sub4"];
 $OOP  =$_GET["sub5"];
 $CS   =$_GET["sub6"];
-
-$s->$marks[0]=$Maths;
-$s->$marks[1]=$Maths;
-$s->$marks[2]=$Maths;
-$s->$marks[3]=$Maths;
-$s->$marks[4]=$Maths;
-$s->$marks[5]=$Maths;
-$s->calc_GPA();
-$s->calc_cgpa();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
