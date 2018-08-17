@@ -1,5 +1,5 @@
 var subjects_credits = { "semester4":{"Maths":4,
-{"TOC":4,
+"TOC":4,
 "COA":4,
 "DBMS":4,
 "OOP":3,
@@ -30,4 +30,10 @@ var subjects_credits = { "semester4":{"Maths":4,
 "Chemistry":3
 
 }
+}
+function printvalues(){
+var values = $("input[name='sub[]']")
+              .map(function(){return $(this).val();}).get();
+console.log(values);
+
 }

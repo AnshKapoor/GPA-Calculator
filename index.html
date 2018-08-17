@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <script 
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="Calculate.js"></script> 
 </head>
 <body>
 
@@ -17,16 +18,14 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <p class="user">Enter your rollno:<input type="number" name="student-rollno">
 <br/>
 
-<p class="labels">Applied Mathematics-IV<input type="number" name="sub1"></p>
-<p class="labels">Theory of Computation<input type="number" name="sub2"></p>
-<p class="labels">Computer Organization and Architecture<input type="number" name="sub3"></p>
-<p class="labels">Database Management Systems<input type="number" name="sub4"></p> 
-<p class="labels">Object Oriented Programming<input type="number" name="sub5"></p>
-<p class="labels">Control Systems<input type="number" name="sub6"></p>
-<p class="labels"> <button 
-type="button" 
-onclick="calculate()">Analyse 
-Result</button> </p> 
+<p class="labels">Applied Mathematics-IV<input type="number" name="sub[]"></p>
+<p class="labels">Theory of Computation<input type="number" name="sub[]"></p>
+<p class="labels">Computer Organization and Architecture<input type="number" name="sub[]"></p>
+<p class="labels">Database Management Systems<input type="number" name="sub[]"></p> 
+<p class="labels">Object Oriented Programming<input type="number" name="sub[]"></p>
+<p class="labels">Control Systems<input type="number" name="sub[]"></p>
+<p class="labels">Computer Graphics and Multimedia<input type="number" name="sub[]"></p> 
+<button type="button" onclick="printvalues()">Analyse Result</button> </p> 
 
 
 
