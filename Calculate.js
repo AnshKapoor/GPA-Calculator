@@ -31,12 +31,52 @@ Chemistry:3
 
 }
 }
+function Mark_GP(values){
+var GP_Array = new Array();
+for(var j=0;j<values.length;j++){
+if(values[j]>=90&&values[j]<=100)
+GP_Array[j]=10;
+else if(values[j]>=75&&values[j]<=89)
+GP_Array[j]=9;
+else if(values[j]>=65&&values[j]<=74)
+GP_Array[j]=8;
+else if(values[j]>=55&&values[j]<=64)
+GP_Array[j]=7;
+else if(values[j]>=50&&values[j]<=54)
+GP_Array[j]=6;
+else if(values[j]>=45&&values[j]<=49)
+GP_Array[j]=5;
+else if(values[j]>=40&&values[j]<=44)
+GP_Array[j]=4;
+else
+GP_Array[j]=0;
+
+
+
+
+
+}
+return GP_Array;
+
+}
+var total_credits=0;
+var i =0;
+var  Total_Gpa = 0;
+var GPAs = new Array();                  // var values contains marks received from user
+                                             // 
+var semester = subjects_credits.semester4;
 function printvalues(){
 var values = $("input[name='sub[]']")
               .map(function(){return $(this).val();}).get();
-var pickedsemester = function({a}){
+GPAs = Mark_GP(values);
 
-return {a};
-}
-console.log(pickedsemester(subject_credits));
+Object.keys(semester).forEach(function(key){
+ total_credits+=semester[key];
+ Total_Gpa+=semester[key]*GPAs[i];
+i++ 
+
+
+})
+console.log(GPAs);
+console.log(Total_Gpa);
 }
