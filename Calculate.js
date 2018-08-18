@@ -34,6 +34,7 @@ var subjects_credits = { "semester4":{"Maths":4,
 function printvalues(){
 var values = $("input[name='sub[]']")
               .map(function(){return $(this).val();}).get();
-console.log(values);
+const myobj = {"semester4"};
+alert(myobj);
 
 }
