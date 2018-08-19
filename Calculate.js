@@ -77,6 +77,7 @@ i++
 
 
 })
-console.log(GPAs);
-console.log(Total_Gpa);
+
+var toreturn = Total_Gpa/total_credits;
+$("#gpa").html("<b>"+toreturn+"</b>");
 }
