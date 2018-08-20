@@ -26,6 +26,7 @@ width:100px;
 padding:20px;
 font-style:italic;
 
+text-align: center;
 
 }
 #gpa{
@@ -34,6 +35,20 @@ background-color:grey;
 border-width:2px;
 border-style:solid;
 border-radius:2px;
+
+
+}
+#Analyse-button{
+width:80px;
+padding:10px;
+margin-top:20px;
+border-style:solid;
+border-width:4px;
+border-radius:4px;
+font-weight:bold;
+
+text-align: center;
+
 
 
 }

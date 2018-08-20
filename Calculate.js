@@ -79,5 +79,6 @@ i++
 })
 
 var toreturn = Total_Gpa/total_credits;
-$("#gpa").html("<b>"+toreturn+"</b>");
+$("#gpa").html(toreturn);
+$("#Analyse-button").prop('disabled',false);
 }
