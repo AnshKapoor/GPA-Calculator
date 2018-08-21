@@ -1,0 +1,25 @@
+{
+  "name": "gpa-calculator",
+  "version": "1.0.0",
+  "description": "A simple application to calculate gpa",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnshKapoor/GPA-Calculator.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "jquery"
+  ],
+  "author": "Ansh Kapoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnshKapoor/GPA-Calculator/issues"
+  },
+  "homepage": "https://github.com/AnshKapoor/GPA-Calculator#readme"
+}
