@@ -1,15 +1,11 @@
-var http = require('http');
-var fs = require('fs');
-fs.readFile('./index1.html',function(err,html){
-if(err){
 
-}
-http.createServer(function(req,res){
-res.writeHeader(200,{"Content-Type":"text/html"});
-res.write(html);
-res.end();
-
-}).listen(8000);
-console.log('running on 8000');
+var express = require('express');
+var app = express();
+var path = require('path');
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index1.html'));
 
 });
+
+app.listen(8080);
+app.use(express.static('public'));
