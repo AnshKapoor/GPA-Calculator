@@ -8,8 +8,14 @@ $result = ConvertApi::convert('txt', [
 );
 $result->saveFiles('convertedIPU');
 $Vdata = file_get_contents("convertedIPU");
-echo strstr($Vdata, '(C)');
+$re = '/(\d+)\([A-Z]\+?\)/';
+preg_match_all($re, $Vdata, $matches);
 
+//$values = var_dump(array_map('intval',$matches[0]));
+$values = array_map('intval',$matches[0]);
+foreach($values as $value){
+    echo "<p> $value </p>";
+}
 
 
 
