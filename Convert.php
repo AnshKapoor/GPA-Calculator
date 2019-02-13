@@ -7,18 +7,9 @@ use \ConvertApi\ConvertApi;
 //], 'pdf'
 //);
 //$result->saveFiles('convertedIPU');
-$Vdata = file_get_contents("convertedIPU");
-$your_array = explode("\n", $Vdata);
+//$Vdata = file_get_contents("convertedIPU");
+//$your_array = explode("\n\n", $Vdata);
+$value = file_get_contents("430356e4-2f91-11e9-8f58-0cc47a792c0a_id_430356e4-2f91-11e9-8f58-0cc47a792c0a.html");
+$value = preg_replace('/(<[^>]*) style=("[^"]+"|\'[^\']+\')([^>]*>)/i', '$1$3', $value);
+echo $value;
 ?>
-<script>
-var abc = <?php echo json_encode($Vdata) ?>;
-
-var regexForStudents = /Result of Programme Code:([^]*?)\f/g;
-var regexForSubjects = /S\.No\. Paper([^]*?)RESULT TAB/g;
-var students = abc.match(regexForStudents);
-var subjects = abc.match(regexForSubjects);
-document.write(subjects);
-
-
-
-</script>
